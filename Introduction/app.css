@@ -1,0 +1,114 @@
+
+
+*{
+  margin: 0;  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+body{
+  width: 100vw;
+}
+.container{
+  background-color: cadetblue;
+  min-height: 100vh; width: 100vh;
+}
+.toggler{
+  display: none;
+}
+@media (max-width: 769px){
+  .container{
+    width: 100%;
+  }
+  .header{
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+  }
+  .toggler{
+    display: block;
+    padding: 3px 8px;
+    border-radius: 12px;
+    background-color: orange;
+    color: white;
+  }
+  
+  nav ul{
+    position: absolute;
+    left: 30%;
+    height: 100vh; width: 50%;
+    background-color: rgb(22, 55, 106);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    display: none;
+    z-index: 99;
+  }
+  nav li{
+    margin: 30px;
+    box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.456);
+    border-radius: 12px;
+    padding: 4px;
+  }
+
+  ul::after{
+    content: " ";
+    background-color: rgb(71, 37, 122);
+    width: 150px; height: 150px;
+    position: absolute;
+    left: -59%; top: 15%;
+    border-radius: 50%;
+    filter: blur(30px);
+  }
+  /* Content */
+  .content{
+    width: 80%;
+    border: 1px dotted white;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  .content .left-div{
+    padding-bottom: 20px;
+  }
+  .content .left-div p{
+    color: white;
+  }
+  .content .right-div{
+    display: flex;
+  }
+  .content .right-div .top{
+    padding: 10px;
+    display: none;
+
+  }
+  .content .right-div .bottom{
+    border: 2px solid white;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    padding: 10px;
+    display: none;
+  }
+  /* section styling */
+  .section-one{
+    text-align: center;
+
+  } .slide-container-one .heading{
+    color: rgba(105, 45, 24, 0.676);
+  }
+  .section-one .content{
+    border-radius: 12px;
+    margin: 0 auto;
+  }.section-one .content ul li{
+    border-bottom: 2px solid rgb(46, 45, 45);
+    margin: 13px; padding: 10px;
+  }
+
+}
